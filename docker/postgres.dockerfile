@@ -1,0 +1,5 @@
+FROM postgres:17-alpine
+
+ENV POSTGRES_DB=database
+ENV POSTGRES_USER=user
+ENV POSTGRES_PASSWORD=pass
