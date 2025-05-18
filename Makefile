@@ -20,6 +20,7 @@ dev:
 		-p 3000:3000 \
 		-p 9229:9229 \
 		--user node \
+		--network host \
 		--name $(PROJECT_NAME_DEV) \
 		$(PROJECT_NAME_DEV)
 
@@ -29,6 +30,7 @@ setup-db:
 init-db:
 	docker container run -d --rm \
 		-p 5432:5432 \
+		--network host \
 		--name postgres \
 		postgres
 
