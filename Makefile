@@ -27,7 +27,7 @@ dev:
 setup-db:
 	docker image build -f docker/postgres.dockerfile -t postgres .
 
-init-db:
+start-db:
 	docker container run -d --rm \
 		-p 5432:5432 \
 		--network host \
