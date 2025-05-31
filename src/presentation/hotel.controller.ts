@@ -4,10 +4,10 @@ import { HotelService } from '../application/services/hotel.service';
 
 @Controller('hotel')
 export class HotelController {
-  constructor(private readonly hotelService: HotelService) {}
+  public constructor(private readonly hotelService: HotelService) { }
 
   @RouteConfig({})
-  @Get('get-all')
+  @Get()
   public getHotels() {
     return this.hotelService.findAll();
   }
